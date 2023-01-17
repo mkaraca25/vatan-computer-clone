@@ -17,11 +17,14 @@
 .header-container input {
     position: relative;font-weight: bold;
 }
+.header-container input:valid ~.icon {
+        margin-left:750px;
+
+}
 .header-container .icon{
     position: absolute;
     margin-right: 90px;
-    font-weight: bold;
-    font-size:20px;
+    font-size:20px;margin-bottom:7px;
 }
 
 .header-left{
@@ -87,11 +90,11 @@
 
 .header-right-account{
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 25px;cursor: pointer;
 }
 .header-right-basket{
     display: inline-block;
-    margin:15px 10px ;
+    margin:15px 10px ;cursor:pointer;
 }
 .header-right i{
     margin-left: 5px;

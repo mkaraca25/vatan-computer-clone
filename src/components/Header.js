@@ -16,7 +16,7 @@ function Header() {
           <p >Kategoriler</p> 
         </div><img className='img' src={logo} alt='vatan-logo'></img>
       </div>
-      <input className='text-2xl text-white'   placeholder='Ürün ara'/><AiOutlineSearch className='icon mr-80 absolute text-2xl text-white'/>
+      <input className='text-2xl text-white' required='required' placeholder='Ürün ara'/><div className='icon'><AiOutlineSearch /></div>
       <div className='header-right'>
         <div className='header-right-account'>
           <p>Üyelik</p>

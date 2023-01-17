@@ -1,5 +1,5 @@
 import React from 'react';
-import card from '../assets/img/card.png';
+import footer from '../assets/img/footer.png';
 import './Footer.css';
 function Footer() {
   return (
@@ -67,7 +67,7 @@ function Footer() {
           <span>Copyright 2016 Vatan Bilgisayar San. ve Tic. A.Ş.</span>
         </div>
         <div className='footer-container-card'>
-          <img src={card} alt='card'/>
+          <img src={footer} alt='card'/>
         </div>
       </div>
     </div>
