@@ -1,0 +1,26 @@
+.products-container{
+    width: 80%;
+    margin: auto;
+}
+.products-container h1{
+    
+    color: #424242;
+
+}
+.products-favorite{
+    color: blue;
+    margin-top: -45px;
+    float:right;
+}
+.products-favorite h5{
+    color: blue;
+    float:right;
+    margin-left: -200px;
+    cursor: pointer;
+}
+.products-list{
+   
+    display: flex;
+    flex-wrap:wrap;
+    
+}

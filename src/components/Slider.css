@@ -1,0 +1,12 @@
+.slider-container{
+    height: 750px;
+    background-color: #1564BF;
+    
+}
+.slider-container-inner{
+    margin: auto;
+    width: 60%;
+    display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}   

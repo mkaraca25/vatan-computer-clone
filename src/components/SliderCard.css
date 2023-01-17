@@ -1,0 +1,13 @@
+.slidercard-container{
+    flex: 1 0 33%;
+    border: 1px solid #E0E0E0;
+    text-align: center;
+    background-color:#F5F5F5 ;
+    height: 650px;
+    margin-top: 25px;
+}
+.slidercard-container img{
+
+    height: 500px;
+    width:200px;
+}

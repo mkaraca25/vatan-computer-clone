@@ -1,0 +1,98 @@
+.header-container{
+    height:60px;
+    background-color:#1564BF ;
+    position: sticky;
+    top:0;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    color:#EEEEEE;
+    z-index: 15;
+    border-bottom: solid 1px gray;
+}
+.header-container p {
+    display: inline-block;
+}
+.header-container input {
+    position: relative;font-weight: bold;
+}
+.header-container .icon{
+    position: absolute;
+    margin-right: 90px;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.header-left{
+    
+    flex:1 0 25%;
+}
+.header-left .img{
+    
+    border-bottom: solid 1px gray;
+}
+.header-left i{
+    cursor:pointer;
+    margin-left:15px;margin-right:5px;
+}
+.header-left p{
+    font-weight:bold;
+    margin-left:5px;
+}
+.header-left-categories{
+    display: inline-block;
+  margin-right: 5px ;
+    float:right;
+
+}
+.header-left img {
+    height: 60px;
+    width: 100px;
+    float: right;
+}
+.header-container input{
+    flex:50%;
+    margin: 5px;
+    background-color: #4383CB;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    color:#EEEEEE;
+    border: 0px;
+}
+.header-container input::placeholder{
+   
+    color:#EEEEEE;
+    text-align: center;
+    
+}
+.header-right{
+    flex: 1 0 25%;
+}
+.header-right .personIcon{
+    font-size:30px;
+    font-weight:bold;
+    margin:-10px;margin-left:10px;margin-right:10px;
+
+}
+.header-right .cartIcon{
+    font-size:25px;
+    font-weight:bold;
+    margin:-7px;margin-left:10px;margin-right:0px;
+    background-color: #fff;
+    color:blue;border-radius:100%;padding:1px;
+
+}
+
+.header-right-account{
+    display: inline-block;
+    margin-left: 25px;
+}
+.header-right-basket{
+    display: inline-block;
+    margin:15px 10px ;
+}
+.header-right i{
+    margin-left: 5px;
+}

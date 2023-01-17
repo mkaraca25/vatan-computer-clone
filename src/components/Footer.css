@@ -1,0 +1,49 @@
+.footer-container{
+    color:#757575;
+    
+}
+.footer-container-top{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    line-height:2;
+ 
+}
+.footer-container-bottom{
+    width: 80%;
+    margin: 0 auto;
+}
+.footer-container-top span{
+    font-weight: 600;
+    padding-left: 48px;
+}
+.footer-container li {
+    list-style: none;
+}
+.footer-corporate{
+    flex:1 0 25%;
+}
+.footer-corporate-2{
+    flex:1 0 25%;
+    margin-top: 45px;
+}
+.footer-categories{
+    flex:1 0 45%;
+}
+.footer-categories .footerUl{
+    display:flex;
+}
+
+.footer-specialProduct{
+    flex:1 0 25%;
+}
+
+.footer-container-copyright{
+    float: left;
+}
+.footer-container-copyright .footerh2{
+    font-weight: bold;
+}
+.footer-container-card{
+    float: right;
+}
