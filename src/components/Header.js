@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../assets/img/logo.jpg';
 import { setIsCartOpen } from '../state';
 import './Header.css';
-import {Badge,Box,IconButton} from '@mui/material';
-import CartMenu from './CartMenu';
+import {Box} from '@mui/material';
+
 function Header() {
   const navigate=useNavigate();
   const dispatch=useDispatch();

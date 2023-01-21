@@ -13,7 +13,7 @@ import 'swiper/swiper.min.css';
 // modules styles
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
-import { color } from "@mui/system";
+
 
 
 const Slider = () => {
@@ -35,8 +35,8 @@ const Slider = () => {
              <div className='slider-container-inner'>
               <SwiperSlide className="slidercard-container" key={item.id}>
                 <div className="slidercard-container">
-                  <img src={item?.img} alt="product" />
-                  <p>{item?.title}</p>
+                  <img src={item?.img} alt="product" className="img"/>
+                  <h4>{item?.title}</h4>
                   <h1 className="product-price">₺ {item?.price}</h1>
                 </div>
               </SwiperSlide>
