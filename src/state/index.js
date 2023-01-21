@@ -18,7 +18,9 @@ export const cartSlice = createSlice({
       state.cart = [...state.cart, action.payload.item];
       toast.success(' Product added successfully')
     },
-
+    resetCart:(state)=>{
+      state.cart=[]
+    },
     removeFromCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload.id);
     },
@@ -53,7 +55,7 @@ export const {
   removeFromCart,
   increaseCount,
   decreaseCount,
-  setIsCartOpen,
+  setIsCartOpen,resetCart
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -37,7 +37,7 @@
 .product-addBasket{
     background-color: #2196F3;
     color: #EEEEEE;
-    height: 50px;
+    height: 60px;
     width: 100%;
     bottom: 0px;
  
@@ -47,12 +47,12 @@
     color: #EEEEEE;
     border: 0px;
     padding:10px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .product-addBasket i {
     float: left;
     background-color: #4C6F9B;
-    height:50px ;
+    height:60px ;
     width: 50px;
    
     /* top:50%; */

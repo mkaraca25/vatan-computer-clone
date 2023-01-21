@@ -16,7 +16,7 @@ function BestSeller() {
         <div className='products-favorite'>
           <h4>
             {' '}
-            Tüm çok satanlar <i className='fas fa-arrow-right' />
+            TÜM ÇOK SATANLAR <i className='fas fa-arrow-right' />
           </h4>
         </div>
       </div>
