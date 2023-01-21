@@ -36,7 +36,7 @@ const Slider = () => {
               <SwiperSlide className="slidercard-container" key={item.id}>
                 <div className="slidercard-container">
                   <img src={item?.img} alt="product" className="img"/>
-                  <h4>{item?.title}</h4>
+                  <p className="title">{item?.title}</p>
                   <h1 className="product-price1">₺ {item?.price}</h1>
                 </div>
               </SwiperSlide>

@@ -11,13 +11,16 @@
     width: 80%;
     display: flex;
    flex-wrap: wrap;height: 90%;
-   align-items: center;
+   align-items: center;background-color: white;
 } 
 .slidercard-container{
     height:80%;margin-left:20px;
 }  
 .product-price1{
-    color:#fff !important;
+    color:#1564BF !important;
+}
+.title{
+    color:#1564BF
 }
 .img{
     height:300px;
