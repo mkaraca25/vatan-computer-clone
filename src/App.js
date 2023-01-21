@@ -1,22 +1,28 @@
-import Header from './components/Header';
-import 'swiper/swiper-bundle.min.css';
-import './App.css';
-import Slider from './components/Slider';
-import Products from './components/Products';
-import BestSeller from './components/BestSeller';
-import Footer from './components/Footer';
-import { BasketProvider } from './contexts/BasketContext';
+import { useEffect } from "react";
+import {BrowserRouter,Routes,Route,useLocation} from 'react-router-dom'
+
+import Home from "./components/pages/Home/index";
+import CartMenu from "./components/CartMenu";
+
+
+const ScrollTop=()=>{
+  const {pathname} = useLocation();
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[pathname])
+  return null;
+}
 function App() {
   return (
-    <BasketProvider>
-      <div className='container'>
-        <Header />
-        <Slider />
-        <Products />
-        <BestSeller />
-        <Footer />
-      </div>
-    </BasketProvider>
+    <div className="app">
+     <BrowserRouter>
+        <ScrollTop/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+        <CartMenu />
+     </BrowserRouter>
+    </div>
   );
 }
 

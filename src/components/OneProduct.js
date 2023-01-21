@@ -1,11 +1,11 @@
-import React, { useState, useContext } from 'react';
+import React, {  useState } from 'react';
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import './OneProduct.css';
-import { BasketContext } from '../contexts/BasketContext';
-import {AiOutlineArrowLeft} from 'react-icons/ai'
-import {AiOutlineArrowRight} from 'react-icons/ai'
-function OneProduct({ title, serialNumber, rating, comment, price ,img}) {
-  const [basketItem, setBasketItem] = useContext(BasketContext);
-  const [addItem, setAddItem] = useContext(BasketContext);
+import { useDispatch } from 'react-redux'
+import {addToCart} from '.././state/index'
+
+
+const  OneProduct=({item})=> {
   const [mouseInside, setMouseInside] = useState(false);
   const mouseEnter = () => {
     setMouseInside(true);
@@ -13,35 +13,29 @@ function OneProduct({ title, serialNumber, rating, comment, price ,img}) {
   const mouseLeave = () => {
     setMouseInside(false);
   };
-  const addToBasket = () => {
-    const item = { title, serialNumber, price,img };
-    const state = (currentState) => [...currentState, item];
-    setAddItem(state);
-    
-  };
+  const dispatch=useDispatch();
+  const [count, setCount] = useState(1);
+
   return (
     <div
       className='product-card'
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
     >
-      <img src={img} alt='product' />
+      <img src={item?.img} alt='product' />
       <br />
       <div className='product-rating'>
         <i className='fas fa-star' />
-        <span>{rating}</span>
+        
 
-        <span className='product-rating-comment'>({comment} Yorum)</span>
+        <span className='product-rating-comment'>({item?.comment} Yorum)</span>
       </div>
       <br />
-      <div className='product-serino'>
-        <span>{serialNumber}</span>
-      </div>
+      
 
-      <p>{title}</p>
+      <p>{item?.title}</p>
 
-      <h2 className='product-price'>₺ {price}</h2>
-
+      <h2 className='product-price'>₺ {item?.price}</h2>
       {!mouseInside ? (
         <>
           <span className='product-shipping'>BUGÜN KARGODA</span>
@@ -52,9 +46,14 @@ function OneProduct({ title, serialNumber, rating, comment, price ,img}) {
       ) : (
         <div className='product-addBasket'>
           <i>
-            <AiOutlineArrowLeft className='icon'/><br />
-            <AiOutlineArrowRight onClick={addToBasket}/>{basketItem.length}</i>
-          <button onClick={addToBasket}>SEPETE EKLE</button>
+            <span>{count}</span><br />
+            <AiOutlineArrowLeft className='icon'onClick={() => count>1?setCount(count - 1):alert('Sıfır vaya Negatif miktar olamaz.')}/><br />
+            <AiOutlineArrowRight onClick={() => setCount(count + 1)}/>
+            </i>
+          <button className="add" onClick={()=>dispatch(addToCart({
+           item: {...item, count }
+           
+        }))}>SEPETE EKLE</button>
         </div>
       )}
     </div>

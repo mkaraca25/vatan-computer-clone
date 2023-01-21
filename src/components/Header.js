@@ -1,16 +1,27 @@
-import React, { useContext } from 'react';
-import './Header.css';
-import logo from '../assets/img/logo.jpg';
-import { BasketContext } from '../contexts/BasketContext';
+import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { IoPersonCircleSharp } from 'react-icons/io5';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+import { IoPersonCircleSharp } from 'react-icons/io5';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/img/logo.jpg';
+import { setIsCartOpen } from '../state';
+import './Header.css';
+import {Badge,Box,IconButton} from '@mui/material';
+import CartMenu from './CartMenu';
 function Header() {
-  const [basketItem, setBasketItem] = useContext(BasketContext);
-  console.log({ basketItem });
+  const navigate=useNavigate();
+  const dispatch=useDispatch();
+  const cart=useSelector((state)=>state.cart.cart)
+
   return (
     <header className='header-container'>
       <div className='header-left'>
+      <Box onClick={()=>navigate("/")}
+        sx={{'&:hover':{cursor:"pointer"}}}
+        >
+           
+        </Box>
         <div className='header-left-categories'>
           <i className='fas fa-bars'></i>
           <p >Kategoriler</p> 
@@ -23,11 +34,10 @@ function Header() {
           <IoPersonCircleSharp className='personIcon'/>
         </div>
         <div className='header-right-basket'>
-          <p>Sepetim</p>
-          <HiOutlineShoppingCart className='cartIcon'/>
-          <span>{basketItem.length}</span>
+          <p>Sepetim</p> 
+          <HiOutlineShoppingCart onClick={()=>dispatch(setIsCartOpen({}))} className='cartIcon'/>
+          <span>{cart.length}</span>
         </div>
-        
       </div>
     </header>
   );

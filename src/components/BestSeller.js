@@ -10,34 +10,28 @@ SwiperCore.use([Navigation, Pagination]);
 function BestSeller() {
   return (
     <div className='bestseller-container'>
-     <div>
-        <div>
-          <h1>Çok satanlar</h1>
-        </div>
+      <div>
+        <h1>Çok Satanlar</h1>
+
         <div className='products-favorite'>
-          <h6>
+          <h3>
             {' '}
-            TÜM ÇOK SATANLAR <i className='fas fa-arrow-right' />
-          </h6>
+            Tüm çok satanlar <i className='fas fa-arrow-right' />
+          </h3>
         </div>
       </div>
       <Swiper
-        spaceBetween={0}
+        spaceBetween={10}
         slidesPerView={5}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         navigation
         pagination
       >
-        {bestSellerProducts.map((product) => (
-          <SwiperSlide key={product.code}>
+        {bestSellerProducts.map((item) => (
+          <SwiperSlide key={item.id}>
             <OneProduct
-              title={product.title}
-              serialNumber={product.code}
-              rating={product.rating}
-              comment={product.comment}
-              price={product.price}
-              img={product.img}
+              item={item} 
             />
           </SwiperSlide>
         ))}

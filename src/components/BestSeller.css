@@ -3,20 +3,4 @@
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
-
-    
-}
- .products-favorite{
-        color: blue;
-        margin-top: -45px;
-        float:right;
-    }
-.products-favorite h6{
-        color: blue;
-        float:right;
-        margin-right: -1000px;
-        cursor: pointer;
-} 
-@media (max-width: 768px){
-    .products-favorite h6{margin-right: -300px;} 
 }

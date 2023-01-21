@@ -2,7 +2,9 @@ import React from 'react';
 import OneProduct from './OneProduct';
 import './Products.css';
 import relatedProducts from '../data/relatedProducts.json';
-function Products() {
+
+const Products=()=> {
+ 
   return (
     <div className='products-container'>
       <div>
@@ -17,15 +19,9 @@ function Products() {
         </div>
       </div>
       <div className='products-list'>
-        {relatedProducts.map((product) => (
-          <OneProduct
-            key={product.code}
-            img={product.img}
-            title={product.title}
-            serialNumber={product.code}
-            rating={product.rating}
-            comment={product.comment}
-            price={product.price}
+        {relatedProducts.map((item) => (
+          <OneProduct 
+            item={item} key={item.id}
           />
         ))}
       </div>
